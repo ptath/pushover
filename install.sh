@@ -50,14 +50,15 @@ print_title() {
 
 print_title "Pushover.net installation script" "Press CTRL+C anytime to abort"
 
-[ -e /bin/pushover ] && echo " Already installed? Exiting..."
-[ -e ~/scripts/pushover.sh ] && echo " Already installed? Exiting..."
+[ -e /bin/pushover ] && echo " Already installed? Exiting..." && exit
+[ -e ~/scripts/pushover.sh ] && echo " Already installed? Exiting..." && exit
 
 [ ! -d ~/scripts ] && mkdir ~/scripts
 echo " Downloading script to home/scripts directory, here is its content:"
+[ -e ~/scripts/pushover.sh ] && echo " Removing old script"
 cd ~/scripts && ls -a
 
-wget -q -N -O ~/scripts/pushover.sh https://github.com/ptath/pushover/raw/master/pushover.sh
+wget -q -O ~/scripts/pushover.sh https://github.com/ptath/pushover/raw/master/pushover.sh
 chmod +x ~/scripts/pushover.sh
 
 echo "  Editing file in vi (press $(print_cyan "i") to edit mode),"
