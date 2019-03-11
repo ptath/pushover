@@ -57,11 +57,11 @@ print_title "Pushover.net installation script" "Press CTRL+C anytime to abort"
 
 [ ! -d ~/scripts ] && mkdir ~/scripts
 [ -e ~/scripts/pushover.sh ] && echo " Removing old script" && rm ~/scripts/pushover.sh
-cd ~/scripts && ls -a
 
 wget -q -O ~/scripts/pushover.sh https://github.com/ptath/pushover/raw/master/pushover.sh
 chmod +x ~/scripts/pushover.sh
 echo " Downloaded script to home/scripts directory, here is its content:"
+cd ~/scripts && ls -a
 
 echo "  Editing file in vi (press $(print_cyan "i") to edit mode),"
 echo "    put yours USER_TOKEN and APP_TOKEN from here $(print_cyan "<https://pushover.net/apps>"),"
