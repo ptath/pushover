@@ -50,8 +50,10 @@ print_title() {
 
 print_title "Pushover.net installation script" "Press CTRL+C anytime to abort"
 
-[ -e /bin/pushover ] && echo " Already installed? Exiting..." && exit
-[ -e ~/scripts/pushover.sh ] && echo " Already installed? Exiting..." && exit
+[ -e /tmp/pushover-install.sh ] && echo " Removing old script in /tmp/..." && rm /tmp/pushover-install.sh
+
+[ -e /bin/pushover ] && echo " Already installed (/bin/pushover)? Exiting..." && exit
+#[ -e ~/scripts/pushover.sh ] && echo " Already installed (~/scripts/pushover.sh)? Exiting..." && exit
 
 [ ! -d ~/scripts ] && mkdir ~/scripts
 [ -e ~/scripts/pushover.sh ] && echo " Removing old script" && rm ~/scripts/pushover.sh
