@@ -1,7 +1,7 @@
 #!/bin/bash
-# Version 0.2
-# By ptath (https://ptath.ru)
 
+# Version 0.3
+# By ptath (https://ptath.ru)
 # Pushover installation script
 
 # Colors for terminal
