@@ -1,6 +1,13 @@
+# pushover.sh
+
 Simple bash script to send messages with Pushover service (https://pushover.net), designed for IoT devices like routers or Raspberry PI. Works well on BuzyBox.
 
-Usage:
+## One-line installation command:
+
+```wget -O /tmp/install.sh https://bit.ly/pushover-sh && chmod +x /tmp/install.sh && /tmp/install.sh
+```
+
+## Usage:
 
 ```
 ./pushover.sh "message" "title" "sound"
@@ -10,7 +17,7 @@ Usage:
 - "title" is optional, otherwize local username and host will be shown
 - "sound" is optional, see https://pushover.net/api#sounds for available sounds
 
-Examples:
+### Examples:
 
 ```
 	`./pushover.sh "This is a test message"`
@@ -22,6 +29,3 @@ Examples:
 ```
 
 You can customize script for other settings, like priority or device to send.
-
-One-line installation command: `wget -O /tmp/install.sh https://bit.ly/pushover-sh && chmod +x /tmp/install.sh && /tmp/i
-nstall.sh`
