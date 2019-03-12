@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version 0.2
+# Version 0.3
 # By ptath (https://ptath.ru)
 # Pushover script
 
@@ -14,51 +14,8 @@ PRIORITY="" #optional
 #Config section end
 
 # DO NOT ERIT BELOW
-# Colors for terminal
-if test -t 1; then
-    ncolors=$(which tput > /dev/null && tput colors)
-    if test -n "$ncolors" && test $ncolors -ge 8; then
-        termcols=$(tput cols)
-        bold="$(tput bold)"
-        standout="$(tput smso)"
-        normal="$(tput sgr0)"
-        red="$(tput setaf 1)"
-        green="$(tput setaf 2)"
-        cyan="$(tput setaf 6)"
-    fi
-fi
 
-print_red() {
-        text="$1"
-        printf "${bold}${red}${text}${normal}"
-}
-
-print_green() {
-        text="$1"
-        printf "${bold}${green}${text}${normal}"
-}
-
-print_cyan() {
-        text="$1"
-        printf "${bold}${cyan}${text}${normal}"
-}
-
-print_title() {
-    title="$1"
-    text="$2"
-
-    echo
-    echo "${cyan}================================================================================${normal}"
-    echo
-    echo -e "  ${bold}${cyan}${title}${normal}"
-    echo
-    echo -en "  ${text}"
-    echo
-    echo "${cyan}================================================================================${normal}"
-    echo
-}
-
-if [ "$USER_TOKEN" == "" ]; then
+if [ "$USER_TOKEN" == "" ] || [ "$APP_TOKEN" == "" ]; then
   echo "  Please edit this script and provide yours USER and APP tokens!"
   echo "    e.g. vi ~/scripts/pushover.sh"
   exit

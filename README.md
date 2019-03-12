@@ -23,4 +23,5 @@ Examples:
 
 You can customize script for other settings, like priority or device to send.
 
-One-line installation command: `wget -O /tmp/install.sh https://bit.ly/pushover-sh && cd /tmp/ && bash ./install.sh`
+One-line installation command: `wget -O /tmp/install.sh https://bit.ly/pushover-sh && chmod +x /tmp/install.sh && /tmp/i
+nstall.sh`
