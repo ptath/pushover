@@ -4,7 +4,8 @@ Simple bash script to send messages with Pushover service (https://pushover.net)
 
 ## One-line installation command:
 
-```wget -O /tmp/install.sh https://bit.ly/pushover-sh && chmod +x /tmp/install.sh && /tmp/install.sh
+```
+wget -O /tmp/install.sh https://bit.ly/pushover-sh && chmod +x /tmp/install.sh && /tmp/install.sh
 ```
 
 ## Usage:
